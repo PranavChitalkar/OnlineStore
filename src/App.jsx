@@ -3,14 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Home from "./pages/Home/Home"
 import './App.css'
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Router, Routes } from 'react-router-dom'
 import Cart from './pages/Cart/Cart'
 import AllProduct from './components/AllProduct/AllProduct'
 import Login from './components/Login/Login'
 import SignUp from './components/SignUp/SignUp'
 import { onAuthStateChanged } from 'firebase/auth'
 import{auth} from './FirebaseAuth/firebaseAuth';
-import Navbar from './components/Navbar/navbar'
+
 import SingleProductPage from './pages/SingleProductPage/SingleProductPage'
 import Footer from './components/Footer/footer'
 import Contact from './pages/Contact/contact'
@@ -107,8 +107,9 @@ function App() {
 
   return (
     <>
-      <div>        
-        <BrowserRouter>
+      <div>   
+        <HashRouter>
+        
         <Navbar userName={userName} cart={cart}/>
           <Routes>
           
@@ -123,7 +124,7 @@ function App() {
 
           </Routes>
           <Footer/>
-        </BrowserRouter>
+          </HashRouter>   
       </div>
 
     </>

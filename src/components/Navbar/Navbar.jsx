@@ -192,11 +192,48 @@ const Navbar = ({ userName, cart }) => {
               </svg>
             </button>
 
-            <button className="bg-orange-300 flex flex-wrap text-white px-10 py-1 ml-4 rounded-full shadow-lg hover:bg-orange-400 transition duration-300 text-lg w-32 active:scale-95">
+            {userName ? (
+              <div className="flex flex-wrap gap-4 ml-2">
+                {/* Cart */}
+                <div className="">
+                  <Link to="/cart">
+                    <span className="font-bold text-xl bg-orange-500 absolute top-[-5] left-[2] overflow-hidden w-6 h-6 rounded-full ">{cart.length}</span>
+                    <MdOutlineShoppingCart size={40} />
+                  </Link>
+                </div>
+              
+                {/* User Icon with Dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setIsDropdownOpen(true)}
+                  onMouseLeave={() => setIsDropdownOpen(false)}
+                >
+                  <FaRegUserCircle className="text-orange-500" size={30} />
+                  {isDropdownOpen && (
+                    <div className="absolute right-0 mt-2 z-50 bg-white shadow-lg rounded-md w-48">
+                      <h2>{userName}</h2>
+                      <button
+                        onClick={handleSignOut}
+                        className="block w-full px-4 py-2 text-black hover:bg-orange-200 rounded-md"
+                      >
+                        Logout
+                      </button>
+                      
+                    </div>
+                  )}
+                </div>
+
+                <h2 className="text-xl text-black"></h2>
+
+              
+              </div>
+            ) : (
+              <button className="bg-orange-300 flex flex-wrap text-white px-10 py-1 ml-4 rounded-full shadow-lg hover:bg-orange-400 transition duration-300 text-lg w-32 active:scale-95">
                 <Link to="/login">
                   <h2>Login</h2>
                 </Link>
               </button>
+            )}
           </div>
         </div>
 
@@ -204,7 +241,7 @@ const Navbar = ({ userName, cart }) => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-gray-100 p-4 space-y-6">
             <Link to="/" className="block text-black hover:text-gray-300 text-xl text-gray-900">Home</Link>
-            <Link to="/cart" className="block text-black hover:text-gray-300 text-xl text-gray-900">Product</Link>
+            <Link to="/allproduct" className="block text-black hover:text-gray-300 text-xl text-gray-900">Product</Link>
             <Link to="/contact" className="block text-black hover:text-gray-300 text-xl text-gray-900">Contact</Link>
  
           </div>
