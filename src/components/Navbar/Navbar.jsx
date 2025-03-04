@@ -28,7 +28,11 @@ const Navbar = ({ userName, cart }) => {
   return (
     <>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <nav className="bg-gray-100 sticky p-4 mt-none border-bt-2 shadow-lg mb-5">
+=======
+      <nav className="bg-gray-100 sticky fixed p-4 mt-none border-bt-2 shadow-lg mb-5">
+>>>>>>> 7c85a2d8b973f3ee733cf9130df64fa2b7d88f9d
 =======
       <nav className="bg-gray-100 sticky fixed p-4 mt-none border-bt-2 shadow-lg mb-5">
 >>>>>>> 7c85a2d8b973f3ee733cf9130df64fa2b7d88f9d
