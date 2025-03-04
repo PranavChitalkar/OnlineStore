@@ -119,7 +119,7 @@ const Navbar = ({ userName, cart }) => {
 
   return (
     <>
-      <nav className="bg-gray-100 p-4 mt-none border-bt-2 shadow-lg mb-5">
+      <nav className="bg-gray-100 sticky p-4 mt-none border-bt-2 shadow-lg mb-5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
 
           {/* Logo */}

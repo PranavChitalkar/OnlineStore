@@ -10,7 +10,7 @@ import Login from './components/Login/Login'
 import SignUp from './components/SignUp/SignUp'
 import { onAuthStateChanged } from 'firebase/auth'
 import{auth} from './FirebaseAuth/firebaseAuth';
-
+import Navbar from './components/Navbar/Navbar'
 import SingleProductPage from './pages/SingleProductPage/SingleProductPage'
 import Footer from './components/Footer/footer'
 import Contact from './pages/Contact/contact'
