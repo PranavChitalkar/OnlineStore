@@ -1,96 +1,4 @@
-/*import React from 'react'
 
-const Navbar=()=>{
-   // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-    // Toggle mobile menu visibility
-    
-
-    return(
-        <>
-        <div>
-        <h1>Navbar Page</h1>
-        </div>
-    
-
-        </>
-    )
-}
-
-export default Navbar;
-
-/////////////////////////////////////////////////////
-
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import Herosection from '../Herosection/Herosection';
-
-const Navbar = () => {
-  // State to track mobile menu visibility
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // Toggle mobile menu visibility
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  return (
-    <>
-      <nav className="bg-500 p-4 border-2 border-black-100 rounded-lg">
-        
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          
-      
-          <div className="text-black text-2xl font-semibold">
-            Reactive
-          </div>
-          
-          
-          <div className="hidden md:flex space-x-8">
-            <Link to='/'>Home</Link>
-            <Link to="/cart">All Product</Link>
-            
-            
-        
-            <a href="mens" className="text-black hover:text-gray-300 transition duration-300">Mens </a>
-            <a href="kids" className="text-black hover:text-gray-300 transition duration-300">Kids</a>
-          </div>
-          
-      
-          <div className="md:flex items-center space-x-4 hidden">
-            <a href="#login" className="bg-white-500 text-black border-2 py-2 px-4 rounded-full hover:bg-white-600 transition duration-300">Login</a>
-          </div>
-          
-  
-          <div className="md:hidden flex items-center">
-            <button onClick={toggleMobileMenu} className="text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-blue-500 p-4 space-y-4">
-            
-            <a href="/about" className="block text-black hover:text-gray-300">About Us</a>
-            <a href="/login" className="block bg-white-500 border-2 text-black py-2 px-4 rounded-full hover:bg-white-600">Login</a>
-          </div>
-        )}
-      </nav>
-    </>
-  );
-};
-
-export default Navbar;
-
-import { FaCartShopping } from "react-icons/fa6";
-<FaCartShopping />
-import { FaRegUserCircle } from "react-icons/fa";
-<FaRegUserCircle />
-*/
 import React, { useState } from 'react';
 import { CiText } from "react-icons/ci";
 import { Link } from "react-router-dom";
@@ -119,7 +27,7 @@ const Navbar = ({ userName, cart }) => {
 
   return (
     <>
-      <nav className="bg-gray-100 p-4 mt-none border-bt-2 shadow-lg mb-5">
+      <nav className="bg-gray-100 fixed p-4 mt-none border-bt-2 shadow-lg mb-5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
 
           {/* Logo */}
